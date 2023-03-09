@@ -14,5 +14,6 @@ export default {};
   background-color: black;
   height: 500px;
   color: white;
+  text-align: center;
 }
 </style>
