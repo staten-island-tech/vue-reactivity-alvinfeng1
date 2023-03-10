@@ -1,25 +1,18 @@
 <template>
   <button @click="show = !show">Toggle</button>
-  <Transition duration="550" class="nested">
-    <div v-if="show" class="outer">
-      <div class="inner">Hello</div>
-    </div>
+  <Transition duration="550" class="button">
+    <div v-if="show" class="inner">Hello</div>
   </Transition>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      show: true,
+    };
+  },
+};
 </script>
 
-<style scoped>
-.nested .inner,
-.nested .inner {
-  transition: all 0.3s ease-in-out;
-}
-
-.nested .inner,
-.nested .inner {
-  transform: translateX(30px);
-  opacity: 0;
-}
-</style>
+<style scoped></style>

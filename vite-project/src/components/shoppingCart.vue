@@ -1,8 +1,6 @@
 <template>
-  <div class="box">
-    <h1>Shopping cart</h1>
-    <p>food</p>
-  </div>
+  <h1>Shopping cart</h1>
+  <p>food</p>
 </template>
 
 <script>
@@ -10,7 +8,7 @@ export default {};
 </script>
 
 <style scoped>
-.box {
+h1 {
   background-color: black;
   height: 500px;
   color: white;
