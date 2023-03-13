@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <h1>Buy food</h1>
+  </div>
 </template>
 
 <script>
