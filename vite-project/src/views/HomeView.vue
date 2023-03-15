@@ -3,6 +3,7 @@
   <Transition duration="550" class="button">
     <div v-if="show" class="inner">Hello</div>
   </Transition>
+  <newfood />
 </template>
 
 <script>
@@ -13,6 +14,7 @@ export default {
     };
   },
 };
+import newfood from "../components/cards.vue";
 </script>
 
 <style scoped></style>
