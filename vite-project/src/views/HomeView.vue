@@ -1,20 +1,22 @@
 <template>
-  <button @click="show = !show">Toggle</button>
+  <!-- <button @click="show = !show">Toggle</button>
   <Transition duration="550" class="button">
     <div v-if="show" class="inner">Hello</div>
-  </Transition>
-  <newfood />
+  </Transition> -->
+  <main><TastyCards /></main>
 </template>
 
-<script>
-export default {
+<script setup>
+import TastyCards from "../components/TastyCards.vue";
+/* export default {
   data() {
     return {
       show: true,
     };
   },
-};
-import newfood from "../components/cards.vue";
+}; */
 </script>
 
-<style scoped></style>
+<style>
+background-color: blue;
+</style>
