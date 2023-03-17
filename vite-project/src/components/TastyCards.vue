@@ -2,6 +2,7 @@
   <ul>
     <li v-for="newfood in newfood">
       {{ newfood.name }} - ${{ newfood.price }}
+      {{ newfood.img }}
     </li>
   </ul>
 </template>
