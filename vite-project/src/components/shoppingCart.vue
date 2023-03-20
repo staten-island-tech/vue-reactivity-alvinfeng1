@@ -1,6 +1,5 @@
 <template>
   <h1>Shopping cart</h1>
-  <p>food</p>
 </template>
 
 <script>
