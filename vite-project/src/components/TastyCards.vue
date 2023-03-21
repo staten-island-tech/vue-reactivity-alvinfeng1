@@ -1,17 +1,23 @@
 <template>
-  <ul>
-    <li v-for="candy in newfood">
-      {{ newfood.name }} - ${{ newfood.price }}
-      {{ newfood.img }}
-    </li>
-  </ul>
+  <li>
+    <ul v-for="newfood in newfood">
+      Name:
+      {{
+        newfood.name
+      }}
+      <br />
+      Price: ${{
+        newfood.price
+      }}
+    </ul>
+    <img v-for="newfood in newfood" src="newfood.img" alt="" class="img" />
+  </li>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      candy: ,
       newfood: [
         {
           id: 1,
