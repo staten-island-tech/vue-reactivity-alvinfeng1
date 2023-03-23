@@ -1,8 +1,7 @@
 <template>
   <main><TastyCards /></main>
 </template>
-<script setup>
+
+<script>
 import TastyCards from "../components/TastyCards.vue";
 </script>
-
-<style></style>
