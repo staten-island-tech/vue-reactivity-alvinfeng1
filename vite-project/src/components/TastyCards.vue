@@ -1,17 +1,11 @@
 <template>
-  <li>
-    <ul v-for="newfood in newfood">
-      Name:
-      {{
-        newfood.name
-      }}
-      <br />
-      Price: ${{
-        newfood.price
-      }}
-    </ul>
-    <img v-for="newfood in newfood" src="newfood.img" alt="" class="img" />
-  </li>
+  <div class="candys">
+    <div class="candy" v-for="item in newfood">
+      <h2 class="name">Name: {{ item.name }}</h2>
+      <h3 class="price">Price: {{ item.price }}</h3>
+      <img class="img" :src="item.img" alt="" />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -130,4 +124,24 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.candys {
+  max-width: 85%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.candy {
+  border: 3px rgb(206, 206, 48) solid;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.name {
+  text-align: center;
+}
+.price {
+  text-align: center;
+}
+.img {
+  width: 5rem;
+}
+</style>
