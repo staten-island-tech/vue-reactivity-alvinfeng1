@@ -1,5 +1,7 @@
 <template>
   <div class="about">
+    <h1>This is an about page</h1>
+    <shoppingCart />
     <h1>Shopping Cart</h1>
   </div>
 </template>
