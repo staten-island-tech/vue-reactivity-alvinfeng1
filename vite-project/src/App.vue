@@ -5,6 +5,7 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <header>
     <div>
+      <h1>Candy Store</h1>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/ShoppingCart">Cart</RouterLink>
@@ -20,24 +21,11 @@ header {
   max-height: 100vh;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
 nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
 }
 
 nav a {
@@ -55,16 +43,6 @@ nav a:first-of-type {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
   }
 
   nav {
