@@ -1,8 +1,8 @@
 <template>
   <div class="candys">
     <div class="candy">
-      <h2 class="name">Name: {{ name }}</h2>
-      <h3 class="price">Price: {{ price }}</h3>
+      <h2 class="name">{{ name }}</h2>
+      <h3 class="price">${{ price }}</h3>
       <img class="img" :src="img" alt="" />
     </div>
   </div>
@@ -18,3 +18,28 @@ export default {
   },
 };
 </script>
+
+<style>
+.candys {
+  max-width: 30%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.candy {
+  border: 3px rgb(206, 206, 48) solid;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.name {
+  text-align: center;
+}
+.price {
+  text-align: center;
+}
+.img {
+  width: 7rem;
+}
+</style>
