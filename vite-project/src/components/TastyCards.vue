@@ -23,7 +23,7 @@ export default {
 .candys {
   max-width: 30%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .candy {
   border: 3px rgb(206, 206, 48) solid;
