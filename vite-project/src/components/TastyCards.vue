@@ -5,6 +5,7 @@
       <h3 class="price">${{ price }}</h3>
       <img class="img" :src="img" alt="" />
     </div>
+    <button class="add">Add to Cart</button>
   </div>
 </template>
 
@@ -41,5 +42,6 @@ export default {
 }
 .img {
   width: 7rem;
+  max-height: 250px;
 }
 </style>

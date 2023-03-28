@@ -19,6 +19,7 @@ import { RouterLink, RouterView } from "vue-router";
 header {
   line-height: 1.5;
   max-height: 100vh;
+  text-align: center;
 }
 
 nav {
@@ -40,12 +41,12 @@ nav a:first-of-type {
 @media (min-width: 1024px) {
   header {
     display: flex;
-    place-items: center;
+    align-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
 
   nav {
-    text-align: left;
+    text-align: center;
     margin-left: -1rem;
     font-size: 1rem;
 
