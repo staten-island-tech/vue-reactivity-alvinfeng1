@@ -4,8 +4,8 @@
       <h2 class="name">{{ name }}</h2>
       <h3 class="price">${{ price }}</h3>
       <img class="img" :src="img" alt="" />
+      <button class="add">Add to Cart</button>
     </div>
-    <button class="add">Add to Cart</button>
   </div>
 </template>
 
@@ -22,17 +22,19 @@ export default {
 
 <style>
 .candys {
-  max-width: 30%;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 .candy {
   border: 3px rgb(206, 206, 48) solid;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
+  width: 20%;
+  background-color: white;
 }
 .name {
   text-align: center;
@@ -42,6 +44,7 @@ export default {
 }
 .img {
   width: 7rem;
-  max-height: 250px;
+  min-height: 150px;
+  min-width: 150px;
 }
 </style>
