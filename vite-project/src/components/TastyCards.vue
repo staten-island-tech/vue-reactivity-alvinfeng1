@@ -21,6 +21,8 @@ export default {
 </script>
 
 <style>
+.add {
+}
 .candys {
   display: flex;
   flex-direction: row;
@@ -34,7 +36,8 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 20%;
-  background-color: white;
+  background-color: wheat;
+  border-radius: 10px;
 }
 .name {
   text-align: center;
@@ -46,5 +49,6 @@ export default {
   width: 7rem;
   min-height: 150px;
   min-width: 150px;
+  border-radius: 5px;
 }
 </style>
