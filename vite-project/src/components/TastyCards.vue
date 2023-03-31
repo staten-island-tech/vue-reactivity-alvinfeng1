@@ -1,15 +1,14 @@
 <template>
-  <div class="candys">
-    <div class="candy">
-      <h2 class="name">{{ name }}</h2>
-      <h3 class="price">${{ price }}</h3>
-      <img class="img" :src="img" alt="" />
-      <button class="add">Add to Cart</button>
-    </div>
+  <div class="candy">
+    <h2 class="name">{{ name }}</h2>
+    <h3 class="price">${{ price }}</h3>
+    <img class="img" :src="img" alt="" />
+    <button v-on:click="" class="add">Add to Cart</button>
   </div>
 </template>
 
 <script>
+import cartItems from "../views/ShoppingCart.vue";
 export default {
   name: "candy",
   props: {
@@ -17,17 +16,24 @@ export default {
     price: Number,
     img: String,
   },
+  data() {
+    return {};
+  },
 };
 </script>
 
 <style>
 .add {
+  height: 30px;
+  width: 150px;
+  background-color: rgb(232, 134, 22);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.candys {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.add:hover {
+  background-color: #f5ad11;
+  transform: translateY(-3px);
 }
 .candy {
   border: 3px rgb(206, 206, 48) solid;
