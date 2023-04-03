@@ -17,7 +17,9 @@ export default {
     img: String,
   },
   methods: {
-    add() {},
+    add() {
+      
+    },
   },
 };
 </script>
