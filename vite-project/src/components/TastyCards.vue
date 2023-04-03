@@ -8,16 +8,12 @@
 </template>
 
 <script>
-import cartItems from "../views/ShoppingCart.vue";
 export default {
   name: "candy",
   props: {
     name: String,
     price: Number,
     img: String,
-  },
-  data() {
-    return {};
   },
 };
 </script>
