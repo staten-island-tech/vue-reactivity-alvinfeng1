@@ -3,17 +3,21 @@
     <h2 class="name">{{ name }}</h2>
     <h3 class="price">${{ price }}</h3>
     <img class="img" :src="img" alt="" />
-    <button v-on:click="" class="add">Add to Cart</button>
+    <button @click="add" class="add">Add to Cart</button>
   </div>
 </template>
 
 <script>
+import items from "../views/ShoppingCart.vue";
 export default {
   name: "candy",
   props: {
     name: String,
     price: Number,
     img: String,
+  },
+  methods: {
+    add() {},
   },
 };
 </script>

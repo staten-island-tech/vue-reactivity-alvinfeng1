@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import candy from "../components/TasTyCards.vue";
+import candy from "../components/TastyCards.vue";
 export default {
-  components: { candy},
+  components: { candy },
   data() {
     return {
       food: [
@@ -105,7 +105,6 @@ export default {
           price: 3,
         },
       ],
-      cart:[]
     };
   },
 };
