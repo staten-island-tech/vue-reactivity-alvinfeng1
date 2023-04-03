@@ -18,10 +18,23 @@ export default {
   },
   methods: {
     add() {
-      
-    },
+      let card = cartItems.cart.find((item) => item.name === this.name);
+  if (card) {
+    card.count++;
+    console.log(card.count)
+  } else {
+    cartItems.cart.push({
+      name: this.name,
+      price: this.price,
+      image: this.image,
+      count: 1,
+    });
+    console.log(store.cart)
+  }
+},
   },
-};
+}
+    
 </script>
 
 <style>
