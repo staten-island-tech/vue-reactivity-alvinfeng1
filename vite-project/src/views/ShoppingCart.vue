@@ -1,8 +1,8 @@
 <script>
 export default {
-  name: items,
   data() {
     return {
+      store,
       cartItems: [],
     };
   },
@@ -12,6 +12,7 @@ export default {
 <template>
   <h1>Shopping Cart</h1>
   <div class="Cart-Container">{{ cartItems }}</div>
+  
 </template>
 
 <style>

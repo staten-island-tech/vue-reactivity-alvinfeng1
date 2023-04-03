@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import items from "../views/ShoppingCart.vue";
+import cartItems from "../views/ShoppingCart.vue";
 export default {
   name: "candy",
   props: {
