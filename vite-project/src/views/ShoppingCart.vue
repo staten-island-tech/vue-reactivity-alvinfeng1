@@ -8,7 +8,9 @@
           <h3 class="price">${{ item.price }}</h3>
           <img class="img" :src="img" alt="" />
 
-          Candy
+          <candy v-for="item in store.cart">
+            :name="item.name" :price="item.price" :img="item.img"
+          </candy>
         </div>
         <button @click="removeItem(index)" class="remove">Remove</button>
       </div>
