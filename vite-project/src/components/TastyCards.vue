@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import cartItems from "../views/ShoppingCart.vue"
+import carts from "../views/ShoppingCart.vue"
 export default {
   name: "candy",
   props: {
@@ -18,7 +18,7 @@ export default {
   },
   methods: {
     add() {
-      this.cartItems.push({
+      this.cart.push({
         name: this.name,
         price: this.price,
         img: this.img,

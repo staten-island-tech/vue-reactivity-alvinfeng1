@@ -22,9 +22,11 @@
 
 <script>
 export default {
-  name: "cart",
-  props: {
-    cartItems: []
+  name: "carts",
+  data() {
+    return {
+      cart: [], 
+    }
   },
   methods: {
     removeItem(index) {
