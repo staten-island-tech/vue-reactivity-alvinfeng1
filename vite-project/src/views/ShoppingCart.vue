@@ -7,6 +7,8 @@
           <h2 class="name">{{ item.name }}</h2>
           <h3 class="price">${{ item.price }}</h3>
           <img class="img" :src="img" alt="" />
+
+          Candy
         </div>
         <button @click="removeItem(index)" class="remove">Remove</button>
       </div>
@@ -21,35 +23,35 @@
 </template>
 
 <script>
+import candy from "../components/tastyCards.vue";
+import { store } from "../components/store";
 export default {
-  name: "carts",
-  data() {
-    return {
-      cart: [], 
-    }
-  },
   methods: {
     removeItem(index) {
-      this.cart.splice(index, 1);
+      store.cart.splice(index, 1);
     },
     getTotalPrice() {
       let totalPrice = 0;
-      this.cart.forEach(item => totalPrice += item.price);
+      store.cart.forEach((item) => (totalPrice += item.price));
       return totalPrice;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style>
+.total {
+  color: chocolate;
+}
 .cart-item {
+  border: 3px rgb(206, 206, 48) solid;
+  margin: 20px auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
+  width: 20%;
+  background-color: wheat;
+  border-radius: 10px;
 }
 
 .cart-item-details {
@@ -59,9 +61,15 @@ export default {
 
 .remove {
   height: 30px;
-  width: 100px;
-  background-color: red;
-  border: none; 
+  width: 150px;
+  background-color: rgb(232, 134, 22);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.remove:hover {
+  background-color: #f5ad11;
+  transform: translateY(-3px);
 }
 .name {
   text-align: center;

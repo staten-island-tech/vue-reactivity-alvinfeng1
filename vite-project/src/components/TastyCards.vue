@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import carts from "../views/ShoppingCart.vue"
+import { store } from "../components/store";
 export default {
   name: "candy",
   props: {
@@ -17,15 +17,15 @@ export default {
     img: String,
   },
   methods: {
-    add() {
-      this.cart.push({
+    add: function () {
+      store.cart.push({
         name: this.name,
         price: this.price,
         img: this.img,
-      })
+      });
     },
   },
-}
+};
 </script>
 
 <style>
@@ -39,7 +39,7 @@ export default {
 }
 .add:hover {
   background-color: #f5ad11;
-  transform: translateY(-3px);
+  transform: translateY(-3px);1
 }
 .candy {
   border: 3px rgb(206, 206, 48) solid;
