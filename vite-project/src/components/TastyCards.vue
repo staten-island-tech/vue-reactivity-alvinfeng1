@@ -39,7 +39,7 @@ export default {
 }
 .add:hover {
   background-color: #f5ad11;
-  transform: translateY(-3px);1
+  transform: translateY(-3px);
 }
 .candy {
   border: 3px rgb(206, 206, 48) solid;

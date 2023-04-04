@@ -7,10 +7,6 @@
           <h2 class="name">{{ item.name }}</h2>
           <h3 class="price">${{ item.price }}</h3>
           <img class="img" :src="img" alt="" />
-
-          <candy v-for="item in store.cart">
-            :name="item.name" :price="item.price" :img="item.img"
-          </candy>
         </div>
         <button @click="removeItem(index)" class="remove">Remove</button>
       </div>
@@ -25,7 +21,7 @@
 </template>
 
 <script>
-import candy from "../components/tastyCards.vue";
+// import candy from "../components/tastyCards.vue";
 import { store } from "../components/store";
 export default {
   methods: {
