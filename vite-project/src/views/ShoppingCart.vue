@@ -1,12 +1,12 @@
 <template>
   <div>
     <h1>Shopping Cart</h1>
-    <div v-if="cart.length > 0">
+    <div v-if="cart > 0">
       <div v-for="(item, index) in cart" :key="index" class="cart-item">
         <div class="cart-item-details">
           <h2 class="name">{{ item.name }}</h2>
           <h3 class="price">${{ item.price }}</h3>
-          <img class="img" :src="img" alt="" />
+          <img class="img" :src="img" alt="" {{ item.img }}/>
         </div>
         <button @click="removeItem(index)" class="remove">Remove</button>
       </div>
@@ -21,9 +21,13 @@
 </template>
 
 <script>
-// import candy from "../components/tastyCards.vue";
 import { store } from "../components/store";
 export default {
+  computed: {
+    cart() {
+      return store.cart;
+    },
+  },
   methods: {
     removeItem(index) {
       store.cart.splice(index, 1);

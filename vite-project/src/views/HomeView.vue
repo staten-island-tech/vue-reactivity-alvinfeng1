@@ -9,6 +9,7 @@
 
 <script>
 import candy from "../components/TastyCards.vue";
+import { store } from "../components/store";
 export default {
   components: { candy },
   data() {
@@ -105,6 +106,7 @@ export default {
           price: 3,
         },
       ],
+      cart: store.cart,
     };
   },
 };

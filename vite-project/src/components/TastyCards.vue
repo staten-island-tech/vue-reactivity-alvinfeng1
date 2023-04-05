@@ -47,7 +47,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20%;
+  width: 30%;
   background-color: wheat;
   border-radius: 10px;
 }
