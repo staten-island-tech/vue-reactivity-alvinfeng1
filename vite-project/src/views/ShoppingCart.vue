@@ -38,9 +38,6 @@ export default {
       return totalPrice;
     },
   },
-  components: {
-    candy,
-  },
 };
 </script>
 
