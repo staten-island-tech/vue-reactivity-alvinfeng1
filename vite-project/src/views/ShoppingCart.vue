@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import candy from "../components/tastyCards.vue";
 import { store } from "../components/store";
 export default {
   data() {
@@ -37,6 +38,9 @@ export default {
       store.cart.forEach((item) => (totalPrice += item.price));
       return totalPrice;
     },
+  },
+  components: {
+    candy,
   },
 };
 </script>
