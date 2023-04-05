@@ -1,10 +1,4 @@
 <template>
-  <candy
-    v-for="item in store.cart"
-    :name="item.name"
-    :price="item.price"
-    :img="item.img"
-  ></candy>
   <button @click="removeItem(index)" class="remove">Remove</button>
   <div class="total">
     <h2>Total: ${{ getTotalPrice() }}</h2>
@@ -12,7 +6,6 @@
 </template>
 
 <script>
-import candy from "../components/tastyCards.vue";
 import { store } from "../components/store";
 export default {
   data() {
@@ -38,9 +31,6 @@ export default {
       store.cart.forEach((item) => (totalPrice += item.price));
       return totalPrice;
     },
-  },
-  components: {
-    candy,
   },
 };
 </script>
